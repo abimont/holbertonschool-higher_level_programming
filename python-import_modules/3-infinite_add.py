@@ -5,7 +5,7 @@ if __name__ == "__main__":
     result = 0
     arguments = len(sys.argv)
 
-    if arguments  == 1:
+    if arguments == 1:
         print("{}".format("0"))
     else:
         for i in range(1, arguments):
