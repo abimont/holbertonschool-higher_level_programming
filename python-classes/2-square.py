@@ -4,7 +4,7 @@
 
 class Square:
     """
-    Instantiation of class with 
+    Instantiation of class with
     private attribute and validations
     """
     def __init__(self, size=0):
