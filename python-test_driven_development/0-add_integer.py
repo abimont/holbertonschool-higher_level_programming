@@ -1,7 +1,15 @@
 #!/usr/bin/python3
+"""
+Adds two integers
+Returns the result
+"""
+
 def add_integer(a, b=98):
+    """
+    a and b must be an integer or an TypeError will be raised
+    """
     try:
-        result = int(a) + (b)
+        result = int(a) + int(b)
     except TypeError:
         if type(a) is not int:
             raise TypeError("a must be an integer")
