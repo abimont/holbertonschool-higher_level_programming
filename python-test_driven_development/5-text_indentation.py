@@ -11,13 +11,13 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     beg = 0
     for c in text:
+        if beg == 1:
+            beg = 0
+            if c == " ":
+                continue
         if c == '.' or c == '?' or c == ':':
             print(c, end="")
             print('\n')
             beg = 1
         else:
-            if beg == 1:
-                beg = 0
-                continue
-            else:
-                print(c, end="")
+            print(c, end="")
