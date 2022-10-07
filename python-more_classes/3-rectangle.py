@@ -59,7 +59,8 @@ class Rectangle:
         return perimeter
 
     """
-    Public instance method that print the rectangle with the character "#"
+    Method that returns the rectangle as a string with the character "#"
+    If width or height are equal to 0, returns an empty string
     """
     def __str__(self):
         rectangle = ""
