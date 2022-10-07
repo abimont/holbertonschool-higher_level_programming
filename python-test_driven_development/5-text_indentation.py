@@ -12,12 +12,11 @@ def text_indentation(text):
     beg = 0
     for c in text:
         if beg == 1:
-            beg = 0
             if c == " ":
                 continue
+            beg = 0
         if c == '.' or c == '?' or c == ':':
-            print(c, end="")
-            print('\n')
+            print(f"{c}\n")
             beg = 1
         else:
             print(c, end="")
