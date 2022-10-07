@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+""" Splits a string after these characters: ., ? or : """
+
+
+def text_indentation(text):
+    """
+    text must be a string or an exception will be raised
+    Prints a text with 2 new lines after each of the characters (., ? or :)
+    """
+    if type(text) is not str:
+        raise TypeError("text must be a string")
+    beg = 0
+    for c in text:
+        if c == '.' or c == '?' or c == ':':
+            print(c, end="")
+            print('\n')
+            beg = 1
+        else:
+            if beg == 1:
+                beg = 0
+                continue
+            else:
+                print(c, end="")
