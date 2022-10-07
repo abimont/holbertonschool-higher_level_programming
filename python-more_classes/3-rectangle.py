@@ -67,7 +67,8 @@ class Rectangle:
             return rectangle
         else:
             for x in range(self.height):
+                if x != 0:
+                    rectangle += "\n"
                 for y in range(self.width):
                     rectangle += "#"
-                rectangle += "\n"
         return rectangle
