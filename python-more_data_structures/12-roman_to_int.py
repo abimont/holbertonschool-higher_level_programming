@@ -18,22 +18,22 @@ def roman_to_int(roman_string):
     for num in string:
         for key, value in numbers.items():
             if num == key:
-                valor = value
+                part = value
                 if prev_key == 'X' and (key == 'L' or key == 'C'):
-                    valor = value - (prev_val * 2)
+                    part = value - (prev_val * 2)
 
                 if prev_key == 'I' and (key == 'V' or key == 'X'):
-                    valor = value - (prev_val * 2)
+                    part = value - (prev_val * 2)
 
                 if prev_key == 'C' and (key == 'D' or key == 'M'):
-                    valor = value - (prev_val * 2)
+                    part = value - (prev_val * 2)
 
                 if num == 'X' or num == 'C' or num == 'I':
                     prev_val = value
                     prev_key = key
 
-                total += valor
-                valor = 0
+                total += part
+                part = 0
             else:
                 continue
     return total
