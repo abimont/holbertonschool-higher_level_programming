@@ -2,9 +2,6 @@
 """ Class that defines a rectangle """
 
 
-from curses.textpad import rectangle
-
-
 class Rectangle:
     """
     class defined by width and height with public instance methods
