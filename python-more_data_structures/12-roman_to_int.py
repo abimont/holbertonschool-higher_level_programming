@@ -34,4 +34,6 @@ def roman_to_int(roman_string):
 
                 total += valor
                 valor = 0
+            else:
+                continue
     return total
