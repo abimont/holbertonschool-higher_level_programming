@@ -24,6 +24,10 @@ Using ''print_sorted''
 >>> list.print_sorted()
 []
 
+>>> list = MyList()
+>>> list
+[]
+
 >>> list = MyList("cba")
 >>> list
 ['c', 'b', 'a']
