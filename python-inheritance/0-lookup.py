@@ -6,4 +6,5 @@ available attributes and methods of an object
 
 
 def lookup(obj):
+    """ Using dir function to get the requested list """
     return dir(obj)
