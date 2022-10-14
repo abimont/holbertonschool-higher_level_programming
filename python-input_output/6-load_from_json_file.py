@@ -17,6 +17,6 @@ def load_from_json_file(filename):
     """
 
     with open(filename) as jfile:
-        des_object = json.loads(jfile)
+        des_object = json.load(jfile)
 
     return des_object
