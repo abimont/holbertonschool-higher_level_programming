@@ -4,12 +4,12 @@
 
 def write_file(filename="", text=""):
     """
-    Writes a string from filename to text (UTF8)
+    Writes a string to filename (UTF8)
     and returns the number of characters written
 
     Args:
-        filename: file to read the string
-        text: file to write thw string
+        filename: file to overwrite
+        text: string that will be writed to filename
     """
 
     with open(filename, 'w', encoding='UTF8') as file:
