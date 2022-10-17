@@ -30,7 +30,7 @@ class Student:
         """
 
         dictionary = {}
-        if type(attrs) is list and [type(elem) is str for elem in attrs]:
+        if type(attrs) is list and all([type(elem) is str for elem in attrs]):
             for k, v in self.__dict__.items():
                 if k in attrs:
                     dictionary[k] = v
