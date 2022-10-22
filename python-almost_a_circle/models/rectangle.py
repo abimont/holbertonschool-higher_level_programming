@@ -122,5 +122,6 @@ class Rectangle(Base):
         [print(" ") for y in range(self.__y)]
         for line in range(self.__height):
             [print(" ", end="") for x in range(self.__x)]
-            [print("#", end="") for element in range(self.__width)]
+            for element in range(self.__width):
+                print("#", end="")
             print()
