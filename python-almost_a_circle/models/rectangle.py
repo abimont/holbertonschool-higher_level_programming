@@ -119,7 +119,7 @@ class Rectangle(Base):
         Prints in stdout the Rectangle instance with the character #
         at position given by x and y
         """
-        [print(" ") for y in range(self.__y)]
+        [print() for y in range(self.__y)]
         for line in range(self.__height):
             [print(" ", end="") for x in range(self.__x)]
             for element in range(self.__width):
