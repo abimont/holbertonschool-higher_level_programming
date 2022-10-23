@@ -45,13 +45,6 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    def __str__(self):
-        """
-        Returns Rectangle's description
-        """
-        return f"[Rectangle] ({self.id}) {self.__x}/\
-{self.__y} - {self.__width}/{self.__height}"
-
     """ width getter and setter """
     @property
     def width(self):
@@ -108,6 +101,13 @@ class Rectangle(Base):
 
         self.__y = value
 
+    def __str__(self):
+        """
+        Returns Rectangle's description
+        """
+        return f"[Rectangle] ({self.id}) {self.__x}/\
+{self.__y} - {self.__width}/{self.__height}"
+
     def area(self):
         """
         Returns the area value of the Rectangle instance
@@ -136,10 +136,10 @@ class Rectangle(Base):
         if args is not None and len(args) > 0:
             try:
                 self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
-                self.x = args[3]
-                self.y = args[4]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
             except IndexError:
                 return
         else:
@@ -154,3 +154,17 @@ class Rectangle(Base):
                     self.__x = value
                 if key == "y":
                     self.__y = value
+
+    def to_dictionary(self):
+        """
+        Returns the dictionary representation of a Rectangle
+        """
+        dict_rep = {
+            "id": self.id,
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y
+        }
+
+        return dict_rep
