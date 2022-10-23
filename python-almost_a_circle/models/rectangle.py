@@ -125,3 +125,20 @@ class Rectangle(Base):
             for element in range(self.__width):
                 print("#", end="")
             print()
+
+    def update(self, *args):
+        """
+        Public method that assigns an argument to each attribute
+
+        Args:
+            args: arguments passed to the function
+        """
+        if args is not None and len(args) > 0:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                return
