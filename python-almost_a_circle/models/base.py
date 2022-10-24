@@ -95,7 +95,9 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ File to instances """
+        """
+        Returns a list of instances
+        """
 
         filename = cls.__name__ + ".json"
         try:
