@@ -22,8 +22,9 @@ if __name__ == "__main__":
     st = 0
     for row in query_rows:
         for name in row:
-            print(name, end="\n" if row ==
+            print(name, end="" if row ==
                   query_rows[-1] and name == row[-1] else ", ")
+    print()
 
     cur.close()
     conn.close()
