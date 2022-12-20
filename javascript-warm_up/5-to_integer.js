@@ -8,5 +8,5 @@ if (!args[2]) {
 } else if (isNaN(args[2])) {
   console.log('Not a number');
 } else {
-  console.log(parseInt(args[2]));
+  console.log('My nymber:', parseInt(args[2]));
 }
